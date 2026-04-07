@@ -1,0 +1,102 @@
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { execSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = path.resolve(__dirname, '..');
+const packageName = '@revivejs/vue-loading';
+
+const releaseLines = {
+  2: {
+    version: '2.0.0',
+    vue: '2.7.16',
+    peerRange: '>=2.7.0 <3.0.0'
+  },
+  3: {
+    version: '3.0.0',
+    vue: '3.5.32',
+    peerRange: '>=3.0.0 <4.0.0'
+  }
+};
+
+function copyDir(sourceDir, targetDir) {
+  fs.cpSync(sourceDir, targetDir, { recursive: true });
+}
+
+function run(command, cwd) {
+  execSync(command, {
+    cwd,
+    stdio: 'inherit',
+    env: {
+      ...process.env,
+      npm_config_yes: 'true'
+    }
+  });
+}
+
+function npmVersionExists(version) {
+  try {
+    const output = execSync(`npm view ${packageName}@${version} version --json`, {
+      cwd: rootDir,
+      stdio: ['ignore', 'pipe', 'ignore']
+    }).toString().trim();
+
+    return output.replace(/^"|"$/g, '') === version;
+  } catch (error) {
+    return false;
+  }
+}
+
+function createReleasePackage(line) {
+  const release = releaseLines[line];
+
+  if (!release) {
+    throw new Error(`Unsupported Vue release line: ${line}`);
+  }
+
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `revivejs-vue-loading-${release.version}-`));
+  const packageJson = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
+
+  copyDir(path.join(rootDir, 'dist'), path.join(tempDir, 'dist'));
+  fs.copyFileSync(path.join(rootDir, 'README.md'), path.join(tempDir, 'README.md'));
+  fs.copyFileSync(path.join(rootDir, 'LICENSE'), path.join(tempDir, 'LICENSE'));
+
+  packageJson.version = release.version;
+  packageJson.peerDependencies.vue = release.peerRange;
+  packageJson.devDependencies.vue = release.vue;
+
+  fs.writeFileSync(path.join(tempDir, 'package.json'), JSON.stringify(packageJson, null, 2) + '\n');
+
+  return {
+    release,
+    tempDir
+  };
+}
+
+export function releaseVueLine(line, options = { publish: true }) {
+  const release = releaseLines[line];
+
+  if (!release) {
+    throw new Error(`Unsupported Vue release line: ${line}`);
+  }
+
+  console.log(`\n=== Vue ${line} · ${release.version} ===`);
+
+  if (options.publish && npmVersionExists(release.version)) {
+    console.log(`${packageName}@${release.version} is already published. Skipping npm publish.`);
+    return;
+  }
+
+  const bundle = createReleasePackage(line);
+
+  run('npm pack', bundle.tempDir);
+
+  if (options.publish) {
+    run('npm publish', bundle.tempDir);
+    console.log(`Published ${packageName}@${release.version}.`);
+  }
+}
+
+export { releaseLines };

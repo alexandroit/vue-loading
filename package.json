@@ -1,0 +1,94 @@
+{
+  "name": "@revivejs/vue-loading",
+  "version": "3.0.0",
+  "description": "Versioned Vue components, directives, composables, and maintained release lines for @revivejs/loading.",
+  "keywords": [
+    "vue",
+    "vue 2",
+    "vue 3",
+    "vue loading",
+    "vue loader",
+    "vue loading state",
+    "vue loading spinner",
+    "vue loading overlay",
+    "vue fullscreen loader",
+    "vue button loader",
+    "vue inline loader",
+    "vue directive",
+    "vue composable",
+    "vue component",
+    "vue dashboard loading",
+    "vue table loading",
+    "vue modal loading",
+    "vue upload loading",
+    "vue accessibility",
+    "vue aria-live",
+    "loading",
+    "loader",
+    "loading-state",
+    "loading-indicator",
+    "spinner",
+    "overlay",
+    "fullscreen-loader",
+    "button-loader",
+    "inline-loader",
+    "progress-ui",
+    "tree-shakeable",
+    "typescript",
+    "revivejs"
+  ],
+  "homepage": "https://alexandroit.github.io/vue-loading/",
+  "bugs": {
+    "url": "https://github.com/alexandroit/vue-loading/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/vue-loading.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist docs/vue-2 docs/vue-3",
+    "docs:install:vue-2": "cd docs-src/vue-2 && npm install",
+    "docs:install:vue-3": "cd docs-src/vue-3 && npm install",
+    "build:docs:vue-2": "cd docs-src/vue-2 && npm run build",
+    "build:docs:vue-3": "cd docs-src/vue-3 && npm run build",
+    "docs:root": "node scripts/write-docs-root.js",
+    "build:docs": "npm run build:docs:vue-2 && npm run build:docs:vue-3 && npm run docs:root",
+    "release:line": "node scripts/release-vue-line.js",
+    "release:sequence": "node scripts/release-vue-sequence.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0 <4.0.0"
+  },
+  "dependencies": {
+    "@revivejs/loading": "^0.1.1",
+    "vue-demi": "0.14.10"
+  },
+  "devDependencies": {
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "vue": "3.5.32"
+  }
+}
