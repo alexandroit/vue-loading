@@ -228,6 +228,24 @@ h1 {
   font-size: 13px;
 }
 
+.code-block-shell {
+  margin: 0 0 18px;
+}
+
+.code-block-shell.is-compact {
+  margin: 0;
+}
+
+.code-block-head {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.copy-button {
+  min-width: 88px;
+}
+
 .code-block.compact {
   margin: 0;
 }

@@ -33,21 +33,36 @@
           <span>1</span>
           <div>
             <strong>Install the wrapper</strong>
-            <pre class="code-block compact">{{ installCode }}</pre>
+            <div class="code-block-shell is-compact">
+              <div class="code-block-head">
+                <button type="button" class="ghost-button copy-button" @click="copySnippet('install', installCode)">{{ snippetCopyLabels.install }}</button>
+              </div>
+              <pre class="code-block compact">{{ installCode }}</pre>
+            </div>
           </div>
         </div>
         <div class="step">
           <span>2</span>
           <div>
             <strong>Register the plugin</strong>
-            <pre class="code-block compact">{{ pluginCode }}</pre>
+            <div class="code-block-shell is-compact">
+              <div class="code-block-head">
+                <button type="button" class="ghost-button copy-button" @click="copySnippet('plugin', pluginCode)">{{ snippetCopyLabels.plugin }}</button>
+              </div>
+              <pre class="code-block compact">{{ pluginCode }}</pre>
+            </div>
           </div>
         </div>
         <div class="step">
           <span>3</span>
           <div>
             <strong>Choose component, directive, or controller</strong>
-            <pre class="code-block compact">{{ directiveCode }}</pre>
+            <div class="code-block-shell is-compact">
+              <div class="code-block-head">
+                <button type="button" class="ghost-button copy-button" @click="copySnippet('directive', directiveCode)">{{ snippetCopyLabels.directive }}</button>
+              </div>
+              <pre class="code-block compact">{{ directiveCode }}</pre>
+            </div>
           </div>
         </div>
       </section>
@@ -244,7 +259,12 @@
               <p>Use the Vue component when the loader itself is the thing being rendered in the tree.</p>
             </div>
           </div>
-          <pre class="code-block">{{ componentCode }}</pre>
+          <div class="code-block-shell">
+            <div class="code-block-head">
+              <button type="button" class="ghost-button copy-button" @click="copySnippet('component', componentCode)">{{ snippetCopyLabels.component }}</button>
+            </div>
+            <pre class="code-block">{{ componentCode }}</pre>
+          </div>
           <div class="surface-frame">
             <revive-loading
               visible
@@ -269,7 +289,12 @@
               <p>Turn an existing card surface into a loading region without rebuilding the layout around the loader.</p>
             </div>
           </div>
-          <pre class="code-block">{{ overlayCode }}</pre>
+          <div class="code-block-shell">
+            <div class="code-block-head">
+              <button type="button" class="ghost-button copy-button" @click="copySnippet('overlay', overlayCode)">{{ snippetCopyLabels.overlay }}</button>
+            </div>
+            <pre class="code-block">{{ overlayCode }}</pre>
+          </div>
           <div class="inline-actions">
             <button type="button" class="button secondary" @click="replayCardSurface">Replay card loader</button>
           </div>
@@ -312,7 +337,12 @@
               <p>Use a controller when the loading state is tied to navigation, bootstrapping, or a larger workspace transition.</p>
             </div>
           </div>
-          <pre class="code-block">{{ controllerCode }}</pre>
+          <div class="code-block-shell">
+            <div class="code-block-head">
+              <button type="button" class="ghost-button copy-button" @click="copySnippet('controller', controllerCode)">{{ snippetCopyLabels.controller }}</button>
+            </div>
+            <pre class="code-block">{{ controllerCode }}</pre>
+          </div>
           <div class="inline-actions">
             <button type="button" class="button primary" @click="runFullscreenDemo">Show fullscreen loader</button>
           </div>
@@ -620,6 +650,14 @@ export default defineComponent({
     }));
     const activeSurface = ref('default');
     const copyButtonLabel = ref('Copy code');
+    const snippetCopyLabels = reactive({
+      install: 'Copy',
+      plugin: 'Copy',
+      directive: 'Copy',
+      component: 'Copy',
+      overlay: 'Copy',
+      controller: 'Copy'
+    });
     const previewVisible = ref(true);
     const surfaceVisible = ref(true);
     const buttonVisible = ref(false);
@@ -736,6 +774,32 @@ export default defineComponent({
       }, 1200);
     }
 
+    async function copySnippet(key, value) {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(value);
+        } else {
+          const textarea = document.createElement('textarea');
+          textarea.value = value;
+          textarea.setAttribute('readonly', 'true');
+          textarea.style.position = 'absolute';
+          textarea.style.left = '-9999px';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+        }
+
+        snippetCopyLabels[key] = 'Copied';
+      } catch (error) {
+        snippetCopyLabels[key] = 'Copy failed';
+      }
+
+      window.setTimeout(() => {
+        snippetCopyLabels[key] = 'Copy';
+      }, 1200);
+    }
+
     return {
       activeDescription,
       activeSurface,
@@ -746,6 +810,7 @@ export default defineComponent({
       controllerCode: CONTROLLER_CODE,
       copyButtonLabel,
       copyCode,
+      copySnippet,
       directiveCode: DIRECTIVE_CODE,
       generatedCode,
       installCode: INSTALL_CODE,
@@ -759,6 +824,7 @@ export default defineComponent({
       replayTiming,
       runFullscreenDemo,
       state,
+      snippetCopyLabels,
       surfaceVisible,
       surfaces,
       variants
