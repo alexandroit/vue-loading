@@ -1,6 +1,6 @@
 {
   "name": "@revivejs/vue-loading",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Versioned Vue components, directives, composables, and maintained release lines for @revivejs/loading.",
   "keywords": [
     "vue",
