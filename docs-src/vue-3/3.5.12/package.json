@@ -1,0 +1,15 @@
+{
+  "name": "@stackline/vue-loading-docs-vue3-3-5-12",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node ./stackline-validate.mjs"
+  },
+  "dependencies": {
+    "@stackline/loading": "file:../../../../../loading/loading",
+    "vue": "3.5.12",
+    "vue-demi": "0.14.10",
+    "@stackline/vue-loading": "file:../../.."
+  },
+  "devDependencies": {}
+}

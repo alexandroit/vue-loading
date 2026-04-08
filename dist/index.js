@@ -1,5 +1,5 @@
 // src/Loading.ts
-import { createLoader } from "@revivejs/loading";
+import { createLoader } from "@stackline/loading";
 import {
   defineComponent,
   h,
@@ -129,7 +129,7 @@ var ReviveLoading = defineComponent({
 // src/directive.ts
 import {
   createLoader as createLoader2
-} from "@revivejs/loading";
+} from "@stackline/loading";
 var instances = /* @__PURE__ */ new WeakMap();
 function normalizeValue(value) {
   if (typeof value === "boolean") {
@@ -214,7 +214,7 @@ var reviveLoadingDirective = {
 };
 
 // src/controller.ts
-import { createLoader as createLoader3 } from "@revivejs/loading";
+import { createLoader as createLoader3 } from "@stackline/loading";
 import { getCurrentInstance, onBeforeUnmount as onBeforeUnmount2 } from "vue-demi";
 function mergeOptions(baseOptions, target, nextOptions) {
   const mergedOptions = {
@@ -314,7 +314,7 @@ import {
   loaderVariants,
   mountLoader,
   showLoader
-} from "@revivejs/loading";
+} from "@stackline/loading";
 export {
   ReviveLoading,
   VueLoading,

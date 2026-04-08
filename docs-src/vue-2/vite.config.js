@@ -7,7 +7,7 @@ export default defineConfig({
   base: './',
   resolve: {
     alias: {
-      '@revivejs/vue-loading': resolve(__dirname, '../../src/index.ts'),
+      '@stackline/vue-loading': resolve(__dirname, '../../src/index.ts'),
       vue: resolve(__dirname, 'node_modules/vue/dist/vue.esm.js'),
       'vue-demi': resolve(__dirname, 'node_modules/vue-demi/lib/index.mjs')
     },

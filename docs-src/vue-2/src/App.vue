@@ -3,9 +3,9 @@
     <header class="hero-grid">
       <section class="hero-card hero-main">
         <span class="badge">Vue {{ vueLine }} · Loading wrapper</span>
-        <h1>@revivejs/vue-loading</h1>
+        <h1>@stackline/vue-loading</h1>
         <p>
-          Maintained Vue bindings for the ReviveJS loading toolkit. Keep the loading
+          Maintained Vue bindings for the Stackline loading toolkit. Keep the loading
           engine framework-agnostic, then add Vue-native ergonomics for declarative
           components, host directives, and fullscreen programmatic states.
         </p>
@@ -396,14 +396,14 @@
 
 <script>
 import { computed, defineComponent, reactive, ref } from 'vue-demi';
-import { createLoadingController, loaderVariants } from '@revivejs/vue-loading';
+import { createLoadingController, loaderVariants } from '@stackline/vue-loading';
 
-const INSTALL_CODE = 'npm install @revivejs/vue-loading';
-const PLUGIN_CODE = `import { createApp } from 'vue';\nimport App from './App.vue';\nimport VueLoading from '@revivejs/vue-loading';\n\ncreateApp(App).use(VueLoading).mount('#app');`;
+const INSTALL_CODE = 'npm install @stackline/vue-loading@2';
+const PLUGIN_CODE = `import { createApp } from 'vue';\nimport App from './App.vue';\nimport VueLoading from '@stackline/vue-loading';\n\ncreateApp(App).use(VueLoading).mount('#app');`;
 const DIRECTIVE_CODE = `<div v-revive-loading="{ visible: isLoading, options: loadingOptions }">...</div>`;
 const COMPONENT_CODE = `<revive-loading\n  :visible=\"true\"\n  :options=\"{\n    variant: 'orbit',\n    size: 56,\n    centered: true,\n    label: 'Loading dashboard'\n  }\"\n  :style=\"{ minHeight: '180px' }\"\n/>`;
 const OVERLAY_CODE = `<section\n  v-revive-loading=\"{ visible: isLoading, options: loadingOptions }\"\n  class=\"card-shell\"\n>\n  ...\n</section>`;
-const CONTROLLER_CODE = `import { createLoadingController } from '@revivejs/vue-loading';\n\nconst loading = createLoadingController();\n\nasync function showLoader() {\n  const instance = await loading.show(document.body, {\n    fullscreen: true,\n    overlay: true,\n    centered: true,\n    variant: 'galaxy',\n    label: 'Loading workspace'\n  });\n\n  window.setTimeout(() => {\n    void instance.hide();\n  }, 1200);\n}`;
+const CONTROLLER_CODE = `import { createLoadingController } from '@stackline/vue-loading';\n\nconst loading = createLoadingController();\n\nasync function showLoader() {\n  const instance = await loading.show(document.body, {\n    fullscreen: true,\n    overlay: true,\n    centered: true,\n    variant: 'galaxy',\n    label: 'Loading workspace'\n  });\n\n  window.setTimeout(() => {\n    void instance.hide();\n  }, 1200);\n}`;
 
 const SURFACES = [
   {
@@ -600,7 +600,7 @@ function buildSurfaceMarkup(surface) {
 function buildGeneratedCode(state, surface) {
   if (state.fullscreen) {
     return [
-      "import { createLoadingController } from '@revivejs/vue-loading';",
+      "import { createLoadingController } from '@stackline/vue-loading';",
       '',
       'const loading = createLoadingController();',
       '',

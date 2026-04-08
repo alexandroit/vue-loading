@@ -1,4 +1,4 @@
-import { createLoader, type LoaderInstance } from '@revivejs/loading';
+import { createLoader, type LoaderInstance } from '@stackline/loading';
 import {
   defineComponent,
   h,

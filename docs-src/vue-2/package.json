@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/vue-loading-docs-vue2",
+  "name": "@stackline/vue-loading-docs-vue2",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@revivejs/loading": "0.1.1",
+    "@stackline/loading": "0.1.1",
     "vue": "2.7.16",
     "vue-demi": "0.14.10"
   },

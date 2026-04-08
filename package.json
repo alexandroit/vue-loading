@@ -1,7 +1,7 @@
 {
-  "name": "@revivejs/vue-loading",
+  "name": "@stackline/vue-loading",
   "version": "3.0.1",
-  "description": "Versioned Vue components, directives, composables, and maintained release lines for @revivejs/loading.",
+  "description": "Versioned Vue components, directives, composables, and maintained release lines for @stackline/loading.",
   "keywords": [
     "vue",
     "vue 2",
@@ -83,7 +83,7 @@
     "vue": ">=3.0.0 <4.0.0"
   },
   "dependencies": {
-    "@revivejs/loading": "^0.1.1",
+    "@stackline/loading": "^0.1.1",
     "vue-demi": "0.14.10"
   },
   "devDependencies": {

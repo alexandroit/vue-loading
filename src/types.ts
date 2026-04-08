@@ -3,7 +3,7 @@ import type {
   LoaderInstance,
   LoaderOptions,
   LoaderTarget
-} from '@revivejs/loading';
+} from '@stackline/loading';
 
 export type VueLoadingOptions = LoaderOptions;
 

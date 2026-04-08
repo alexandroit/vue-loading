@@ -1,6 +1,6 @@
-import * as _revivejs_loading from '@revivejs/loading';
-import { LoaderTarget, LoaderOptions, LoaderInstance } from '@revivejs/loading';
-export { LoaderAriaLive, LoaderCategory, LoaderDirection, LoaderInstance, LoaderOptions, LoaderState, LoaderTarget, LoaderThemeTokens, LoaderVariant, ResolvedLoaderOptions, StyleObject, VariantDefinition, applyThemeTokens, createLoader, darkTheme, defaultLoaderOptions, getLoaderStyles, getVariantDefinition, getVariantStyles, hideLoader, hydrateLoaders, lightTheme, loaderVariants, mountLoader, showLoader } from '@revivejs/loading';
+import * as _stackline_loading from '@stackline/loading';
+import { LoaderTarget, LoaderOptions, LoaderInstance } from '@stackline/loading';
+export { LoaderAriaLive, LoaderCategory, LoaderDirection, LoaderInstance, LoaderOptions, LoaderState, LoaderTarget, LoaderThemeTokens, LoaderVariant, ResolvedLoaderOptions, StyleObject, VariantDefinition, applyThemeTokens, createLoader, darkTheme, defaultLoaderOptions, getLoaderStyles, getVariantDefinition, getVariantStyles, hideLoader, hydrateLoaders, lightTheme, loaderVariants, mountLoader, showLoader } from '@stackline/loading';
 import * as vue from 'vue';
 import { Plugin, Directive, PropType, DirectiveBinding } from 'vue-demi';
 
@@ -54,7 +54,7 @@ declare const ReviveLoading: vue.DefineComponent<vue.ExtractPropTypes<{
     onDestroyed?: ((...args: any[]) => any) | undefined;
 }>, {
     visible: boolean;
-    options: _revivejs_loading.LoaderOptions;
+    options: _stackline_loading.LoaderOptions;
 }, {}, {}, {}, string, vue.ComponentProvideOptions, true, {}, any>;
 
 type LoadingDirectiveBinding = DirectiveBinding<VueLoadingDirectiveValue | VueLoadingOptions | boolean>;

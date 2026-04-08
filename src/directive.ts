@@ -1,7 +1,7 @@
 import {
   createLoader,
   type LoaderInstance
-} from '@revivejs/loading';
+} from '@stackline/loading';
 import type {
   Directive,
   DirectiveBinding

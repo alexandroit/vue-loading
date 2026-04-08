@@ -17,7 +17,7 @@ export {
   loaderVariants,
   mountLoader,
   showLoader
-} from '@revivejs/loading';
+} from '@stackline/loading';
 export type {
   LoaderAriaLive,
   LoaderCategory,
@@ -31,7 +31,7 @@ export type {
   ResolvedLoaderOptions,
   StyleObject,
   VariantDefinition
-} from '@revivejs/loading';
+} from '@stackline/loading';
 export type {
   LoadingController,
   VueLoadingDirectiveValue,

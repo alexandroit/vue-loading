@@ -43,7 +43,7 @@ __export(index_exports, {
 module.exports = __toCommonJS(index_exports);
 
 // src/Loading.ts
-var import_loading = require("@revivejs/loading");
+var import_loading = require("@stackline/loading");
 var import_vue_demi = require("vue-demi");
 function ensureInstance(host, options, current) {
   if (!host) {
@@ -164,7 +164,7 @@ var ReviveLoading = (0, import_vue_demi.defineComponent)({
 });
 
 // src/directive.ts
-var import_loading2 = require("@revivejs/loading");
+var import_loading2 = require("@stackline/loading");
 var instances = /* @__PURE__ */ new WeakMap();
 function normalizeValue(value) {
   if (typeof value === "boolean") {
@@ -249,7 +249,7 @@ var reviveLoadingDirective = {
 };
 
 // src/controller.ts
-var import_loading3 = require("@revivejs/loading");
+var import_loading3 = require("@stackline/loading");
 var import_vue_demi2 = require("vue-demi");
 function mergeOptions(baseOptions, target, nextOptions) {
   const mergedOptions = {
@@ -335,7 +335,7 @@ var VueLoading = {
 var plugin_default = VueLoading;
 
 // src/index.ts
-var import_loading4 = require("@revivejs/loading");
+var import_loading4 = require("@stackline/loading");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   ReviveLoading,
