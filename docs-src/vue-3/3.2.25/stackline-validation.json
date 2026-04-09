@@ -1,0 +1,19 @@
+{
+  "packageName": "@stackline/vue-loading",
+  "projectRoot": "vue-loading/vue-loading",
+  "family": "vue-3",
+  "framework": "vue",
+  "exactVersion": "3.2.25",
+  "releaseRoot": "vue-loading/vue-loading/docs-src/vue-3/3.2.25",
+  "build": null,
+  "install": {
+    "success": true,
+    "command": "npm install --ignore-scripts"
+  },
+  "validate": {
+    "success": true,
+    "command": "npm run validate"
+  },
+  "success": true,
+  "generatedAt": "2026-04-09T01:53:23.640Z"
+}

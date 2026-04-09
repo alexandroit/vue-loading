@@ -13,7 +13,7 @@ const releaseLines = {
   2: {
     version: '2.0.0',
     vue: '2.7.16',
-    peerRange: '>=2.7.0 <3.0.0'
+    peerRange: '>=2.0.0 <3.0.0'
   },
   3: {
     version: '3.0.0',
@@ -57,7 +57,7 @@ function createReleasePackage(line) {
     throw new Error(`Unsupported Vue release line: ${line}`);
   }
 
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `revivejs-vue-loading-${release.version}-`));
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `stackline-vue-loading-${release.version}-`));
   const packageJson = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
 
   copyDir(path.join(rootDir, 'dist'), path.join(tempDir, 'dist'));

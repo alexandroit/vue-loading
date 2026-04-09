@@ -4,34 +4,16 @@
   "family": "vue-3",
   "framework": "vue",
   "exactVersion": "3.0.0",
-  "releaseRoot": "/storage/data/github/revivejs/vue-loading/vue-loading/docs-src/vue-3/3.0.0",
-  "build": {
-    "command": "npm run build",
-    "cwd": "/storage/data/github/revivejs/vue-loading/vue-loading",
-    "startedAt": "2026-04-08T22:18:05.226Z",
-    "finishedAt": "2026-04-08T22:18:06.777Z",
-    "exitCode": 0,
-    "success": true,
-    "output": "> @stackline/vue-loading@3.0.1 build\n> tsup\n\nCLI Building entry: src/index.ts\nCLI Using tsconfig: tsconfig.json\nCLI tsup v8.5.1\nCLI Using tsup config: /storage/data/github/revivejs/vue-loading/vue-loading/tsup.config.ts\nCLI Target: es2020\nCLI Cleaning output folder\nESM Build start\nCJS Build start\nESM dist/index.js     7.72 KB\nESM dist/index.js.map 15.71 KB\nESM ⚡️ Build success in 13ms\nCJS dist/index.cjs     9.51 KB\nCJS dist/index.cjs.map 15.62 KB\nCJS ⚡️ Build success in 14ms\nDTS Build start\nDTS ⚡️ Build success in 887ms\nDTS dist/index.d.ts  3.53 KB\nDTS dist/index.d.cts 3.53 KB"
-  },
+  "releaseRoot": "vue-loading/vue-loading/docs-src/vue-3/3.0.0",
+  "build": null,
   "install": {
-    "command": "npm install --ignore-scripts",
-    "cwd": "/storage/data/github/revivejs/vue-loading/vue-loading/docs-src/vue-3/3.0.0",
-    "startedAt": "2026-04-08T22:18:06.777Z",
-    "finishedAt": "2026-04-08T22:18:07.365Z",
-    "exitCode": 0,
     "success": true,
-    "output": "added 1 package, removed 15 packages, and audited 20 packages in 531ms\n\n1 package is looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities"
+    "command": "npm install --ignore-scripts"
   },
   "validate": {
-    "command": "npm run validate",
-    "cwd": "/storage/data/github/revivejs/vue-loading/vue-loading/docs-src/vue-3/3.0.0",
-    "startedAt": "2026-04-08T22:18:07.365Z",
-    "finishedAt": "2026-04-08T22:18:07.754Z",
-    "exitCode": 0,
     "success": true,
-    "output": "> @stackline/vue-loading-docs-vue3-3-0-0@1.0.0 validate\n> node ./stackline-validate.mjs\n\nValidated @stackline/vue-loading for vue 3.0.0 in /storage/data/github/revivejs/vue-loading/vue-loading/docs-src/vue-3/3.0.0"
+    "command": "npm run validate"
   },
   "success": true,
-  "generatedAt": "2026-04-08T22:18:04.720Z"
+  "generatedAt": "2026-04-09T01:52:43.870Z"
 }

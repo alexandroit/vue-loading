@@ -1,0 +1,19 @@
+{
+  "packageName": "@stackline/vue-loading",
+  "projectRoot": "vue-loading/vue-loading",
+  "family": "vue-2",
+  "framework": "vue",
+  "exactVersion": "2.7.4",
+  "releaseRoot": "vue-loading/vue-loading/docs-src/vue-2/2.7.4",
+  "build": null,
+  "install": {
+    "success": true,
+    "command": "npm install --ignore-scripts"
+  },
+  "validate": {
+    "success": true,
+    "command": "npm run validate"
+  },
+  "success": true,
+  "generatedAt": "2026-04-09T01:52:29.481Z"
+}

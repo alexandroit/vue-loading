@@ -34,8 +34,7 @@
     "inline-loader",
     "progress-ui",
     "tree-shakeable",
-    "typescript",
-    "revivejs"
+    "typescript"
   ],
   "homepage": "https://alexandroit.github.io/vue-loading/",
   "bugs": {

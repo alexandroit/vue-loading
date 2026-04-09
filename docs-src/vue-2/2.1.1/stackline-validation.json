@@ -1,0 +1,17 @@
+{
+  "packageName": "@stackline/vue-loading",
+  "projectRoot": "vue-loading/vue-loading",
+  "family": "vue-2",
+  "framework": "vue",
+  "exactVersion": "2.1.1",
+  "releaseRoot": "vue-loading/vue-loading/docs-src/vue-2/2.1.1",
+  "build": null,
+  "install": {
+    "success": false,
+    "command": "npm install --ignore-scripts",
+    "output": "npm error code ERESOLVE\nnpm error ERESOLVE unable to resolve dependency tree\nnpm error\nnpm error While resolving: @stackline/vue-loading-docs-vue2-2-1-1@1.0.0\nnpm error Found: vue@2.1.1\nnpm error node_modules/vue\nnpm error   vue@\"2.1.1\" from the root project\nnpm error\nnpm error Could not resolve dependency:\nnpm error peer vue@\"^3.0.0-0 || ^2.6.0\" from vue-demi@0.14.10\nnpm error node_modules/vue-demi\nnpm error   vue-demi@\"0.14.10\" from the root project\nnpm error\nnpm error Fix the upstream dependency conflict, or retry\nnpm error this command with --force or --legacy-peer-deps\nnpm error to accept an incorrect (and potentially broken) dependency resolution.\nnpm error\nnpm error\nnpm error For a full report see:\nnpm error /home/xandrobr/.npm/_logs/2026-04-09T01_51_50_159Z-eresolve-report.txt\nnpm error A complete log of this run can be found in: /home/xandrobr/.npm/_logs/2026-04-09T01_51_50_159Z-debug-0.log"
+  },
+  "validate": null,
+  "success": false,
+  "generatedAt": "2026-04-09T01:51:50.109Z"
+}
