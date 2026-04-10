@@ -26,8 +26,8 @@
 
 It gives Vue teams three practical integration paths:
 
-- `<revive-loading>` when the loader itself is what the component should render
-- `v-revive-loading` when an existing card, table, modal body, chart shell, or button should become busy
+- `<stackline-loading>` when the loader itself is what the component should render
+- `v-stackline-loading` when an existing card, table, modal body, chart shell, or button should become busy
 - `createLoadingController()` and `useLoading()` when the loading state is fullscreen, route-level, or fully programmatic
 
 The wrapper stays intentionally thin so the real behavior continues to live in the core package:
@@ -95,7 +95,7 @@ createApp(App).use(VueLoading).mount('#app');
 
 ```vue
 <template>
-  <revive-loading
+  <stackline-loading
     :visible="true"
     :options="{
       variant: 'orbit',
@@ -113,7 +113,7 @@ createApp(App).use(VueLoading).mount('#app');
 ```vue
 <template>
   <section
-    v-revive-loading="{ visible: isLoading, options: loadingOptions }"
+    v-stackline-loading="{ visible: isLoading, options: loadingOptions }"
     class="card-shell"
   >
     ...
@@ -123,11 +123,11 @@ createApp(App).use(VueLoading).mount('#app');
 
 ## Usage Patterns
 
-### `<revive-loading />`
+### `<stackline-loading />`
 
 Use the component when the loader itself is the thing being rendered.
 
-### `v-revive-loading`
+### `v-stackline-loading`
 
 Use the directive for:
 
@@ -165,7 +165,7 @@ async function showLoader() {
 
 ## API Overview
 
-### `<revive-loading />`
+### `<stackline-loading />`
 
 Props:
 
@@ -190,7 +190,7 @@ Exposed methods:
 - `update(options)`
 - `destroy()`
 
-### `v-revive-loading`
+### `v-stackline-loading`
 
 Directive values:
 

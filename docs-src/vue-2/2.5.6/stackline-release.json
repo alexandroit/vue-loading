@@ -9,7 +9,7 @@
   "localInstallSource": "../../..",
   "expectedExports": [
     "default",
-    "ReviveLoading"
+    "StacklineLoading"
   ],
   "installCommand": "npm install --ignore-scripts",
   "validateCommand": "npm run validate",

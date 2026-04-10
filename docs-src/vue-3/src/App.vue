@@ -158,7 +158,7 @@
 
             <div class="playground-stage" :class="{ 'is-reduced-motion': state.reducedMotion }">
               <div v-if="activeSurface === 'default' && !previewOptions.overlay" :class="['playground-surface', 'playground-surface--clean', { 'is-fullscreen-simulated': state.fullscreen }]">
-                <revive-loading
+                <stackline-loading
                   :visible="previewVisible"
                   :options="previewOptions"
                   class="playground-loader-host"
@@ -168,7 +168,7 @@
 
               <div
                 v-else-if="activeSurface === 'table'"
-                v-revive-loading="{ visible: previewVisible, options: previewOptions }"
+                v-stackline-loading="{ visible: previewVisible, options: previewOptions }"
                 :class="['playground-surface', 'surface-table', { 'is-fullscreen-simulated': state.fullscreen }]"
               >
                 <div class="playground-table-head">
@@ -187,7 +187,7 @@
 
               <div
                 v-else-if="activeSurface === 'page'"
-                v-revive-loading="{ visible: previewVisible, options: previewOptions }"
+                v-stackline-loading="{ visible: previewVisible, options: previewOptions }"
                 :class="['playground-surface', 'surface-page', { 'is-fullscreen-simulated': state.fullscreen }]"
               >
                 <div class="page-topbar" />
@@ -202,7 +202,7 @@
               <div v-else-if="activeSurface === 'modal'" :class="['playground-surface', 'surface-modal', { 'is-fullscreen-simulated': state.fullscreen }]">
                 <div class="modal-shell">
                   <div class="modal-header" />
-                  <div class="modal-body" v-revive-loading="{ visible: previewVisible, options: previewOptions }">
+                  <div class="modal-body" v-stackline-loading="{ visible: previewVisible, options: previewOptions }">
                     <div class="modal-line" />
                     <div class="modal-line short" />
                     <div class="modal-line" />
@@ -212,7 +212,7 @@
 
               <div
                 v-else-if="activeSurface === 'chart'"
-                v-revive-loading="{ visible: previewVisible, options: previewOptions }"
+                v-stackline-loading="{ visible: previewVisible, options: previewOptions }"
                 :class="['playground-surface', 'surface-chart', { 'is-fullscreen-simulated': state.fullscreen }]"
               >
                 <div class="chart-bar" style="height: 28%" />
@@ -225,7 +225,7 @@
 
               <div
                 v-else-if="activeSurface === 'upload'"
-                v-revive-loading="{ visible: previewVisible, options: previewOptions }"
+                v-stackline-loading="{ visible: previewVisible, options: previewOptions }"
                 :class="['playground-surface', 'surface-upload', { 'is-fullscreen-simulated': state.fullscreen }]"
               >
                 <div class="upload-icon" />
@@ -235,7 +235,7 @@
 
               <div
                 v-else
-                v-revive-loading="{ visible: previewVisible, options: previewOptions }"
+                v-stackline-loading="{ visible: previewVisible, options: previewOptions }"
                 :class="['playground-surface', 'surface-card-grid', { 'is-fullscreen-simulated': state.fullscreen }]"
               >
                 <div class="surface-card-cell" />
@@ -266,7 +266,7 @@
             <pre class="code-block">{{ componentCode }}</pre>
           </div>
           <div class="surface-frame">
-            <revive-loading
+            <stackline-loading
               visible
               :options="{
                 variant: 'orbit',
@@ -299,7 +299,7 @@
             <button type="button" class="button secondary" @click="replayCardSurface">Replay card loader</button>
           </div>
           <div
-            v-revive-loading="{ visible: surfaceVisible, options: cardSurfaceOptions }"
+            v-stackline-loading="{ visible: surfaceVisible, options: cardSurfaceOptions }"
             class="card-shell"
           >
             <div class="card-metric">$128,400</div>
@@ -322,7 +322,7 @@
           </div>
           <div class="button-surface">
             <div
-              v-revive-loading="{ visible: buttonVisible, options: buttonOptions }"
+              v-stackline-loading="{ visible: buttonVisible, options: buttonOptions }"
               class="button-shell"
             >
               <button type="button" class="cta-button" @click="replayButtonSurface">Sync invoice</button>
@@ -358,8 +358,8 @@
             </div>
           </div>
           <ul class="feature-list">
-            <li><code>&lt;revive-loading /&gt;</code> for component-first loading states.</li>
-            <li><code>v-revive-loading</code> for cards, tables, modals, charts, and buttons.</li>
+            <li><code>&lt;stackline-loading /&gt;</code> for component-first loading states.</li>
+            <li><code>v-stackline-loading</code> for cards, tables, modals, charts, and buttons.</li>
             <li><code>createLoadingController()</code> and <code>useLoading()</code> for fullscreen and programmatic flows.</li>
             <li>Core exports like <code>loaderVariants</code>, <code>createLoader</code>, and theme helpers stay available.</li>
           </ul>
@@ -400,9 +400,9 @@ import { createLoadingController, loaderVariants } from '@stackline/vue-loading'
 
 const INSTALL_CODE = 'npm install @stackline/vue-loading@3';
 const PLUGIN_CODE = `import { createApp } from 'vue';\nimport App from './App.vue';\nimport VueLoading from '@stackline/vue-loading';\n\ncreateApp(App).use(VueLoading).mount('#app');`;
-const DIRECTIVE_CODE = `<div v-revive-loading="{ visible: isLoading, options: loadingOptions }">...</div>`;
-const COMPONENT_CODE = `<revive-loading\n  :visible=\"true\"\n  :options=\"{\n    variant: 'orbit',\n    size: 56,\n    centered: true,\n    label: 'Loading dashboard'\n  }\"\n  :style=\"{ minHeight: '180px' }\"\n/>`;
-const OVERLAY_CODE = `<section\n  v-revive-loading=\"{ visible: isLoading, options: loadingOptions }\"\n  class=\"card-shell\"\n>\n  ...\n</section>`;
+const DIRECTIVE_CODE = `<div v-stackline-loading="{ visible: isLoading, options: loadingOptions }">...</div>`;
+const COMPONENT_CODE = `<stackline-loading\n  :visible=\"true\"\n  :options=\"{\n    variant: 'orbit',\n    size: 56,\n    centered: true,\n    label: 'Loading dashboard'\n  }\"\n  :style=\"{ minHeight: '180px' }\"\n/>`;
+const OVERLAY_CODE = `<section\n  v-stackline-loading=\"{ visible: isLoading, options: loadingOptions }\"\n  class=\"card-shell\"\n>\n  ...\n</section>`;
 const CONTROLLER_CODE = `import { createLoadingController } from '@stackline/vue-loading';\n\nconst loading = createLoadingController();\n\nasync function showLoader() {\n  const instance = await loading.show(document.body, {\n    fullscreen: true,\n    overlay: true,\n    centered: true,\n    variant: 'galaxy',\n    label: 'Loading workspace'\n  });\n\n  window.setTimeout(() => {\n    void instance.hide();\n  }, 1200);\n}`;
 
 const SURFACES = [
@@ -615,7 +615,7 @@ function buildGeneratedCode(state, surface) {
 
   if (surface === 'default' && !state.overlay) {
     return [
-      '<revive-loading',
+      '<stackline-loading',
       '  :visible="isLoading"',
       `  :options="${buildOptionsObjectLiteral(state, 2)}"`,
       '  :style="{ minHeight: \'220px\' }"',
@@ -625,7 +625,7 @@ function buildGeneratedCode(state, surface) {
 
   return [
     `<section`,
-    `  v-revive-loading="{ visible: isLoading, options: ${buildOptionsObjectLiteral(state, 2, true)} }"`,
+    `  v-stackline-loading="{ visible: isLoading, options: ${buildOptionsObjectLiteral(state, 2, true)} }"`,
     `>`,
     buildSurfaceMarkup(surface),
     `</section>`

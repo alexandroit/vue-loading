@@ -1,5 +1,5 @@
-export { ReviveLoading } from './Loading';
-export { reviveLoadingDirective } from './directive';
+export { StacklineLoading } from './Loading';
+export { stacklineLoadingDirective } from './directive';
 export { createLoadingController, useLoading } from './controller';
 export { VueLoading } from './plugin';
 export { default } from './plugin';

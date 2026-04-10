@@ -36,8 +36,8 @@ function ensureInstance(
   return current;
 }
 
-export const ReviveLoading = defineComponent({
-  name: 'ReviveLoading',
+export const StacklineLoading = defineComponent({
+  name: 'StacklineLoading',
   inheritAttrs: false,
   props: {
     visible: {

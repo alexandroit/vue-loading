@@ -20,7 +20,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var index_exports = {};
 __export(index_exports, {
-  ReviveLoading: () => ReviveLoading,
+  StacklineLoading: () => StacklineLoading,
   VueLoading: () => VueLoading,
   applyThemeTokens: () => import_loading4.applyThemeTokens,
   createLoader: () => import_loading4.createLoader,
@@ -36,7 +36,7 @@ __export(index_exports, {
   lightTheme: () => import_loading4.lightTheme,
   loaderVariants: () => import_loading4.loaderVariants,
   mountLoader: () => import_loading4.mountLoader,
-  reviveLoadingDirective: () => reviveLoadingDirective,
+  stacklineLoadingDirective: () => stacklineLoadingDirective,
   showLoader: () => import_loading4.showLoader,
   useLoading: () => useLoading
 });
@@ -62,8 +62,8 @@ function ensureInstance(host, options, current) {
   });
   return current;
 }
-var ReviveLoading = (0, import_vue_demi.defineComponent)({
-  name: "ReviveLoading",
+var StacklineLoading = (0, import_vue_demi.defineComponent)({
+  name: "StacklineLoading",
   inheritAttrs: false,
   props: {
     visible: {
@@ -224,7 +224,7 @@ function destroyDirectiveLoader(element) {
     instances.delete(element);
   }
 }
-var reviveLoadingDirective = {
+var stacklineLoadingDirective = {
   mounted(element, binding) {
     syncDirectiveLoader(element, binding);
   },
@@ -327,9 +327,9 @@ function useLoading(defaultOptions = {}) {
 // src/plugin.ts
 var VueLoading = {
   install(app) {
-    app.component("revive-loading", ReviveLoading);
-    app.component("ReviveLoading", ReviveLoading);
-    app.directive("revive-loading", reviveLoadingDirective);
+    app.component("stackline-loading", StacklineLoading);
+    app.component("StacklineLoading", StacklineLoading);
+    app.directive("stackline-loading", stacklineLoadingDirective);
   }
 };
 var plugin_default = VueLoading;
@@ -338,7 +338,7 @@ var plugin_default = VueLoading;
 var import_loading4 = require("@stackline/loading");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  ReviveLoading,
+  StacklineLoading,
   VueLoading,
   applyThemeTokens,
   createLoader,
@@ -353,7 +353,7 @@ var import_loading4 = require("@stackline/loading");
   lightTheme,
   loaderVariants,
   mountLoader,
-  reviveLoadingDirective,
+  stacklineLoadingDirective,
   showLoader,
   useLoading
 });

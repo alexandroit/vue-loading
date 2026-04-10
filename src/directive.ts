@@ -99,7 +99,7 @@ function destroyDirectiveLoader(element: HTMLElement) {
   }
 }
 
-export const reviveLoadingDirective: Directive & LegacyDirectiveHooks = {
+export const stacklineLoadingDirective: Directive & LegacyDirectiveHooks = {
   mounted(element, binding) {
     syncDirectiveLoader(element as HTMLElement, binding as LoadingDirectiveBinding);
   },

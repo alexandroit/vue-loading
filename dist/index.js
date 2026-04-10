@@ -25,8 +25,8 @@ function ensureInstance(host, options, current) {
   });
   return current;
 }
-var ReviveLoading = defineComponent({
-  name: "ReviveLoading",
+var StacklineLoading = defineComponent({
+  name: "StacklineLoading",
   inheritAttrs: false,
   props: {
     visible: {
@@ -189,7 +189,7 @@ function destroyDirectiveLoader(element) {
     instances.delete(element);
   }
 }
-var reviveLoadingDirective = {
+var stacklineLoadingDirective = {
   mounted(element, binding) {
     syncDirectiveLoader(element, binding);
   },
@@ -292,9 +292,9 @@ function useLoading(defaultOptions = {}) {
 // src/plugin.ts
 var VueLoading = {
   install(app) {
-    app.component("revive-loading", ReviveLoading);
-    app.component("ReviveLoading", ReviveLoading);
-    app.directive("revive-loading", reviveLoadingDirective);
+    app.component("stackline-loading", StacklineLoading);
+    app.component("StacklineLoading", StacklineLoading);
+    app.directive("stackline-loading", stacklineLoadingDirective);
   }
 };
 var plugin_default = VueLoading;
@@ -316,7 +316,7 @@ import {
   showLoader
 } from "@stackline/loading";
 export {
-  ReviveLoading,
+  StacklineLoading,
   VueLoading,
   applyThemeTokens,
   createLoader4 as createLoader,
@@ -332,7 +332,7 @@ export {
   lightTheme,
   loaderVariants,
   mountLoader,
-  reviveLoadingDirective,
+  stacklineLoadingDirective,
   showLoader,
   useLoading
 };

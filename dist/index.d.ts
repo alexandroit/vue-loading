@@ -26,7 +26,7 @@ type VueLoadingPlugin = Plugin & {
     }): void;
 };
 
-declare const ReviveLoading: vue.DefineComponent<vue.ExtractPropTypes<{
+declare const StacklineLoading: vue.DefineComponent<vue.ExtractPropTypes<{
     visible: {
         type: BooleanConstructor;
         default: boolean;
@@ -64,11 +64,11 @@ type LegacyDirectiveHooks = {
     update?: (element: HTMLElement, binding: LoadingDirectiveBinding) => void;
     unbind?: (element: HTMLElement) => void;
 };
-declare const reviveLoadingDirective: Directive & LegacyDirectiveHooks;
+declare const stacklineLoadingDirective: Directive & LegacyDirectiveHooks;
 
 declare function createLoadingController(defaultOptions?: VueLoadingOptions): LoadingController;
 declare function useLoading(defaultOptions?: VueLoadingOptions): LoadingController;
 
 declare const VueLoading: VueLoadingPlugin;
 
-export { type LoadingController, ReviveLoading, VueLoading, type VueLoadingDirectiveValue, type VueLoadingOptions, type VueLoadingPlugin, createLoadingController, VueLoading as default, reviveLoadingDirective, useLoading };
+export { type LoadingController, StacklineLoading, VueLoading, type VueLoadingDirectiveValue, type VueLoadingOptions, type VueLoadingPlugin, createLoadingController, VueLoading as default, stacklineLoadingDirective, useLoading };
