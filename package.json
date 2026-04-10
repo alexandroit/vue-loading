@@ -76,7 +76,8 @@
     "build:docs": "npm run build:docs:vue-2 && npm run build:docs:vue-3 && npm run docs:root",
     "release:line": "node scripts/release-vue-line.js",
     "release:sequence": "node scripts/release-vue-sequence.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.cjs"
   },
   "peerDependencies": {
     "vue": ">=3.0.0 <4.0.0"
