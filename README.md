@@ -10,7 +10,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![GitHub stars](https://img.shields.io/github/stars/alexandroit/vue-loading.svg?style=flat-square)](https://github.com/alexandroit/vue-loading/stargazers)
 
-**[Documentation & Live Demos](https://alexandroit.github.io/vue-loading/)** | **[npm](https://www.npmjs.com/package/@stackline/vue-loading)** | **[Issues](https://github.com/alexandroit/vue-loading/issues)** | **[Repository](https://github.com/alexandroit/vue-loading)**
+**[Documentation & Live Demos](https://alexandro.net/docs/vue/vue-loading/)** | **[npm](https://www.npmjs.com/package/@stackline/vue-loading)** | **[Issues](https://github.com/alexandroit/vue-loading/issues)** | **[Repository](https://github.com/alexandroit/vue-loading)**
 
 **Latest version:** `3.0.0`
 
@@ -67,8 +67,8 @@ Each package family only installs on its matching Vue family. Framework major an
 
 | Package family | Framework family | Peer range | Tested release window | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **3.x** | **Vue 3 only** | **`>=3.0.0 <4.0.0`** | **3.0.0 -> 3.5.32** | [Vue 3 family docs](https://alexandroit.github.io/vue-loading/vue-3/) |
-| **2.x** | **Vue 2 only** | **`>=2.0.0 <3.0.0`** | **2.0.0 -> 2.7.16** | [Vue 2 family docs](https://alexandroit.github.io/vue-loading/vue-2/) |
+| **3.x** | **Vue 3 only** | **`>=3.0.0 <4.0.0`** | **3.0.0 -> 3.5.32** | [Vue 3 family docs](https://alexandro.net/docs/vue/vue-loading/vue-3/) |
+| **2.x** | **Vue 2 only** | **`>=2.0.0 <3.0.0`** | **2.0.0 -> 2.7.16** | [Vue 2 family docs](https://alexandro.net/docs/vue/vue-loading/vue-2/) |
 
 
 ## Installation
