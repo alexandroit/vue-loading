@@ -4,6 +4,12 @@ All notable changes to `@stackline/vue-loading` are documented here.
 
 ## [Unreleased]
 
+- Updated the maintained Vue 3 documentation app to Vue 3.5.41 and Vite 8.2,
+  committed reproducible demo lockfiles, and added both Vue lines to CI.
+- Added the missing package archive smoke command used by the other maintained
+  Stackline wrappers.
+- Replaced the broad Vue 2 audit exception with a strict gate that tolerates
+  only the unfixed upstream `GHSA-5j4c-8p2g-v4jx` advisory.
 - Moved exact-version dependency records to `package.fixture.json`, repaired
   their validators, and added an offline catalog contract to keep historical
   metadata out of active dependency alerts.
