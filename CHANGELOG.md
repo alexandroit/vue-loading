@@ -4,6 +4,9 @@ All notable changes to `@stackline/vue-loading` are documented here.
 
 ## [Unreleased]
 
+- Moved exact-version dependency records to `package.fixture.json`, repaired
+  their validators, and added an offline catalog contract to keep historical
+  metadata out of active dependency alerts.
 - Replaced the removed `@stackline/loading` dependency with the maintained
   `@stackline/loading-core` package without changing the Vue wrapper API.
 - Refreshed vulnerable build dependencies and forced tsup's nested esbuild onto

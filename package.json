@@ -68,6 +68,7 @@
     "access": "public"
   },
   "scripts": {
+    "test:fixtures": "node tools/stackline-run-release-smoke.mjs --catalog",
     "build": "tsup",
     "clean": "rm -rf dist docs/vue-2 docs/vue-3",
     "docs:install:vue-2": "cd docs-src/vue-2 && npm install",
