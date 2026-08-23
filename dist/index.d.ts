@@ -1,6 +1,6 @@
-import * as _stackline_loading from '@stackline/loading';
-import { LoaderTarget, LoaderOptions, LoaderInstance } from '@stackline/loading';
-export { LoaderAriaLive, LoaderCategory, LoaderDirection, LoaderInstance, LoaderOptions, LoaderState, LoaderTarget, LoaderThemeTokens, LoaderVariant, ResolvedLoaderOptions, StyleObject, VariantDefinition, applyThemeTokens, createLoader, darkTheme, defaultLoaderOptions, getLoaderStyles, getVariantDefinition, getVariantStyles, hideLoader, hydrateLoaders, lightTheme, loaderVariants, mountLoader, showLoader } from '@stackline/loading';
+import * as _stackline_loading_core from '@stackline/loading-core';
+import { LoaderTarget, LoaderOptions, LoaderInstance } from '@stackline/loading-core';
+export { LoaderAriaLive, LoaderCategory, LoaderDirection, LoaderInstance, LoaderOptions, LoaderState, LoaderTarget, LoaderThemeTokens, LoaderVariant, ResolvedLoaderOptions, StyleObject, VariantDefinition, applyThemeTokens, createLoader, darkTheme, defaultLoaderOptions, getLoaderStyles, getVariantDefinition, getVariantStyles, hideLoader, hydrateLoaders, lightTheme, loaderVariants, mountLoader, showLoader } from '@stackline/loading-core';
 import * as vue from 'vue';
 import { Plugin, Directive, PropType, DirectiveBinding } from 'vue-demi';
 
@@ -54,7 +54,7 @@ declare const StacklineLoading: vue.DefineComponent<vue.ExtractPropTypes<{
     onDestroyed?: ((...args: any[]) => any) | undefined;
 }>, {
     visible: boolean;
-    options: _stackline_loading.LoaderOptions;
+    options: _stackline_loading_core.LoaderOptions;
 }, {}, {}, {}, string, vue.ComponentProvideOptions, true, {}, any>;
 
 type LoadingDirectiveBinding = DirectiveBinding<VueLoadingDirectiveValue | VueLoadingOptions | boolean>;

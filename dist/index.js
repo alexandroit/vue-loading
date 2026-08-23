@@ -1,5 +1,5 @@
 // src/Loading.ts
-import { createLoader } from "@stackline/loading";
+import { createLoader } from "@stackline/loading-core";
 import {
   defineComponent,
   h,
@@ -129,7 +129,7 @@ var StacklineLoading = defineComponent({
 // src/directive.ts
 import {
   createLoader as createLoader2
-} from "@stackline/loading";
+} from "@stackline/loading-core";
 var instances = /* @__PURE__ */ new WeakMap();
 function normalizeValue(value) {
   if (typeof value === "boolean") {
@@ -214,7 +214,7 @@ var stacklineLoadingDirective = {
 };
 
 // src/controller.ts
-import { createLoader as createLoader3 } from "@stackline/loading";
+import { createLoader as createLoader3 } from "@stackline/loading-core";
 import { getCurrentInstance, onBeforeUnmount as onBeforeUnmount2 } from "vue-demi";
 function mergeOptions(baseOptions, target, nextOptions) {
   const mergedOptions = {
@@ -314,7 +314,7 @@ import {
   loaderVariants,
   mountLoader,
   showLoader
-} from "@stackline/loading";
+} from "@stackline/loading-core";
 export {
   StacklineLoading,
   VueLoading,
@@ -332,7 +332,8 @@ export {
   lightTheme,
   loaderVariants,
   mountLoader,
-  stacklineLoadingDirective,
   showLoader,
+  stacklineLoadingDirective,
   useLoading
 };
+//# sourceMappingURL=index.js.map

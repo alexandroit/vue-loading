@@ -1,4 +1,4 @@
-import { createLoader, type LoaderInstance, type LoaderTarget } from '@stackline/loading';
+import { createLoader, type LoaderInstance, type LoaderTarget } from '@stackline/loading-core';
 import { getCurrentInstance, onBeforeUnmount } from 'vue-demi';
 
 import type { LoadingController, VueLoadingOptions } from './types';

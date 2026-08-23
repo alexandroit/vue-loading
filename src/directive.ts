@@ -1,7 +1,7 @@
 import {
   createLoader,
   type LoaderInstance
-} from '@stackline/loading';
+} from '@stackline/loading-core';
 import type {
   Directive,
   DirectiveBinding

@@ -22,35 +22,35 @@ var index_exports = {};
 __export(index_exports, {
   StacklineLoading: () => StacklineLoading,
   VueLoading: () => VueLoading,
-  applyThemeTokens: () => import_loading4.applyThemeTokens,
-  createLoader: () => import_loading4.createLoader,
+  applyThemeTokens: () => import_loading_core4.applyThemeTokens,
+  createLoader: () => import_loading_core4.createLoader,
   createLoadingController: () => createLoadingController,
-  darkTheme: () => import_loading4.darkTheme,
+  darkTheme: () => import_loading_core4.darkTheme,
   default: () => plugin_default,
-  defaultLoaderOptions: () => import_loading4.defaultLoaderOptions,
-  getLoaderStyles: () => import_loading4.getLoaderStyles,
-  getVariantDefinition: () => import_loading4.getVariantDefinition,
-  getVariantStyles: () => import_loading4.getVariantStyles,
-  hideLoader: () => import_loading4.hideLoader,
-  hydrateLoaders: () => import_loading4.hydrateLoaders,
-  lightTheme: () => import_loading4.lightTheme,
-  loaderVariants: () => import_loading4.loaderVariants,
-  mountLoader: () => import_loading4.mountLoader,
+  defaultLoaderOptions: () => import_loading_core4.defaultLoaderOptions,
+  getLoaderStyles: () => import_loading_core4.getLoaderStyles,
+  getVariantDefinition: () => import_loading_core4.getVariantDefinition,
+  getVariantStyles: () => import_loading_core4.getVariantStyles,
+  hideLoader: () => import_loading_core4.hideLoader,
+  hydrateLoaders: () => import_loading_core4.hydrateLoaders,
+  lightTheme: () => import_loading_core4.lightTheme,
+  loaderVariants: () => import_loading_core4.loaderVariants,
+  mountLoader: () => import_loading_core4.mountLoader,
+  showLoader: () => import_loading_core4.showLoader,
   stacklineLoadingDirective: () => stacklineLoadingDirective,
-  showLoader: () => import_loading4.showLoader,
   useLoading: () => useLoading
 });
 module.exports = __toCommonJS(index_exports);
 
 // src/Loading.ts
-var import_loading = require("@stackline/loading");
+var import_loading_core = require("@stackline/loading-core");
 var import_vue_demi = require("vue-demi");
 function ensureInstance(host, options, current) {
   if (!host) {
     return null;
   }
   if (!current) {
-    return (0, import_loading.createLoader)({
+    return (0, import_loading_core.createLoader)({
       ...options,
       target: host,
       visible: false
@@ -164,7 +164,7 @@ var StacklineLoading = (0, import_vue_demi.defineComponent)({
 });
 
 // src/directive.ts
-var import_loading2 = require("@stackline/loading");
+var import_loading_core2 = require("@stackline/loading-core");
 var instances = /* @__PURE__ */ new WeakMap();
 function normalizeValue(value) {
   if (typeof value === "boolean") {
@@ -189,7 +189,7 @@ function ensureDirectiveLoader(element, binding) {
   const normalized = normalizeValue(binding.value);
   const existing = instances.get(element);
   if (!existing) {
-    const instance = (0, import_loading2.createLoader)({
+    const instance = (0, import_loading_core2.createLoader)({
       ...normalized.options,
       target: element,
       visible: false
@@ -249,7 +249,7 @@ var stacklineLoadingDirective = {
 };
 
 // src/controller.ts
-var import_loading3 = require("@stackline/loading");
+var import_loading_core3 = require("@stackline/loading-core");
 var import_vue_demi2 = require("vue-demi");
 function mergeOptions(baseOptions, target, nextOptions) {
   const mergedOptions = {
@@ -266,7 +266,7 @@ function createLoadingController(defaultOptions = {}) {
   function ensureInstance2(target, nextOptions) {
     const mergedOptions = mergeOptions(defaultOptions, target, nextOptions);
     if (!instance) {
-      instance = (0, import_loading3.createLoader)({
+      instance = (0, import_loading_core3.createLoader)({
         ...mergedOptions,
         visible: false
       });
@@ -335,7 +335,7 @@ var VueLoading = {
 var plugin_default = VueLoading;
 
 // src/index.ts
-var import_loading4 = require("@stackline/loading");
+var import_loading_core4 = require("@stackline/loading-core");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   StacklineLoading,
@@ -353,7 +353,8 @@ var import_loading4 = require("@stackline/loading");
   lightTheme,
   loaderVariants,
   mountLoader,
-  stacklineLoadingDirective,
   showLoader,
+  stacklineLoadingDirective,
   useLoading
 });
+//# sourceMappingURL=index.cjs.map

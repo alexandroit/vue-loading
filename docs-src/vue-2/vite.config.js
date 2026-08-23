@@ -7,9 +7,9 @@ export default defineConfig({
   base: './',
   resolve: {
     alias: {
-      '@stackline/vue-loading': resolve(__dirname, '../../src/index.ts'),
-      vue: resolve(__dirname, 'node_modules/vue/dist/vue.esm.js'),
-      'vue-demi': resolve(__dirname, 'node_modules/vue-demi/lib/index.mjs')
+      '@stackline/vue-loading': resolve(import.meta.dirname, '../../src/index.ts'),
+      vue: resolve(import.meta.dirname, 'node_modules/vue/dist/vue.esm.js'),
+      'vue-demi': resolve(import.meta.dirname, 'node_modules/vue-demi/lib/index.mjs')
     },
     dedupe: ['vue', 'vue-demi']
   },

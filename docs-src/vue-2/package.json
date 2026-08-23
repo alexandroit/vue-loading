@@ -2,18 +2,19 @@
   "name": "@stackline/vue-loading-docs-vue2",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@stackline/loading": "0.1.1",
+    "@stackline/loading-core": "1.0.1",
     "vue": "2.7.16",
     "vue-demi": "0.14.10"
   },
   "devDependencies": {
     "@vitejs/plugin-vue2": "2.3.4",
-    "vite": "7.3.1"
+    "vite": "7.3.6"
   }
 }

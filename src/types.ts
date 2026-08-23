@@ -3,7 +3,7 @@ import type {
   LoaderInstance,
   LoaderOptions,
   LoaderTarget
-} from '@stackline/loading';
+} from '@stackline/loading-core';
 
 export type VueLoadingOptions = LoaderOptions;
 

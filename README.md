@@ -1,6 +1,6 @@
 # @stackline/vue-loading
 
-> A maintained Vue wrapper for **@stackline/loading** with declarative components, host directives, a programmatic controller, and versioned demos for Vue 2 and Vue 3.
+> A maintained Vue wrapper for **@stackline/loading-core** with declarative components, host directives, a programmatic controller, and versioned demos for Vue 2 and Vue 3.
 
 [![npm version](https://img.shields.io/npm/v/@stackline/vue-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/vue-loading)
 [![npm downloads](https://img.shields.io/npm/dt/@stackline/vue-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/vue-loading)
@@ -12,11 +12,11 @@
 
 **[Documentation & Live Demos](https://alexandro.net/docs/vue/vue-loading/)** | **[npm](https://www.npmjs.com/package/@stackline/vue-loading)** | **[Issues](https://github.com/alexandroit/vue-loading/issues)** | **[Repository](https://github.com/alexandroit/vue-loading)**
 
-**Latest version:** `3.0.0`
+**Latest version:** `3.0.1`
 
 ---
 
-> **Built on top of:** [@stackline/loading](https://www.npmjs.com/package/@stackline/loading), the framework-agnostic Stackline loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
+> **Built on top of:** [@stackline/loading-core](https://www.npmjs.com/package/@stackline/loading-core), the framework-agnostic Stackline loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
 
 ---
 
@@ -32,7 +32,7 @@ It gives Vue teams three practical integration paths:
 
 The wrapper stays intentionally thin so the real behavior continues to live in the core package:
 
-- polished loading variants from `@stackline/loading`
+- polished loading variants from `@stackline/loading-core`
 - delay and `minVisible` anti-flicker behavior
 - inline, overlay, container, and fullscreen modes
 - accessibility defaults and optional labels
@@ -235,6 +235,11 @@ npm run docs:install:vue-2
 npm run docs:install:vue-3
 npm run build:docs
 ```
+
+## Security
+
+Report vulnerabilities privately by following [SECURITY.md](SECURITY.md). Do
+not disclose exploit details in a public issue.
 
 ## License
 

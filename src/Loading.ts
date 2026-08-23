@@ -1,4 +1,4 @@
-import { createLoader, type LoaderInstance } from '@stackline/loading';
+import { createLoader, type LoaderInstance } from '@stackline/loading-core';
 import {
   defineComponent,
   h,
